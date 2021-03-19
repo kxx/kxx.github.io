@@ -17,21 +17,22 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2 # 上文提到了第一步必须使用 checkout Action
+      - uses: actions/checkout@v1 # v2 上文提到了第一步必须使用 checkout Action
     #    with:
         #  submodules: recursive  # 获取 Hugo 的主题，主题放在 submodule 中 (true OR recursive)
         #  fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Read .env
-        id: hugo-version
-        run: | # 从 .env 文件中读取 HUGO 的版本号
-          . ./.env
-          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
+    #  - name: Read .env
+    #    id: hugo-version
+    #    run: | # 从 .env 文件中读取 HUGO 的版本号
+    #      . ./.env
+    #      echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2 # 使用第三方 Action 进行构建
         with:
-          hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
+    #      hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
+            hugo-version: latest
           # extended: true
 
       - name: Build
