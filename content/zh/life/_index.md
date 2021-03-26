@@ -1,4 +1,4 @@
 +++
-title= "life"
+title= "好好生活"
 +++
 
