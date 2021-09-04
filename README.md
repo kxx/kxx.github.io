@@ -1,2 +1,2 @@
-# kongxiangxiang.com
+# kxx.com
 kxx`s blog
