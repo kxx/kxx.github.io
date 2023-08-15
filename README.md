@@ -1,2 +1,0 @@
-# kxx.github.io
-blog
