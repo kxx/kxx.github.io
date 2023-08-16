@@ -384,7 +384,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "这是kxx的生活瞬间，你好啊，陌生人！"
+    siteDescription = "这是kxx的生活瞬间。陌生人，你好啊！"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
