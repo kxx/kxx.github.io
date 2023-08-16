@@ -27,8 +27,8 @@ jobs:
             - name: Deploy Web
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  PERSONAL_TOKEN: ${{ secrets.BLOG_ACTION_TOKEN }}
-                  PUBLISH_BRANCH: build
-                  PUBLISH_DIR: ./public
+                  deploy_key: ${{ secrets.BLOG_ACTION_TOKEN }}
+                  publish_branch: build
+                  publish_dir: ./public
                   cname: kxx.me
                   commit_message: ${{ github.event.head_commit.message }}
