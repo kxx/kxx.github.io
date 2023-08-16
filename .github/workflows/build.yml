@@ -22,7 +22,7 @@ jobs:
                   extended: true
 
             - name: Build Web
-              run: hugo
+              run: hugo --minify
 
             - name: Deploy Web
               uses: peaceiris/actions-gh-pages@v3
@@ -30,4 +30,5 @@ jobs:
                   PERSONAL_TOKEN: ${{ secrets.BLOG_ACTION_TOKEN }}
                   PUBLISH_BRANCH: build
                   PUBLISH_DIR: ./public
+                  cname: kxx.me
                   commit_message: ${{ github.event.head_commit.message }}
