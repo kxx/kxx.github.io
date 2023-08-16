@@ -1,7 +1,7 @@
 ---
 title: "hello"
 date: 2023-08-15T16:58:57+08:00
-draft: true
+draft: false
 ---
 记忆 你好呀
 
