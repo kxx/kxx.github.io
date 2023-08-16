@@ -1,0 +1,9 @@
+{
+    "name": "kxx",
+    "short_name": "kxx",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "start_url": "./"
+}
