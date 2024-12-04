@@ -18,6 +18,10 @@ newContentEditor = ""
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
 
+# 标题大小写格式
+# https://gohugo.io/getting-started/configuration/#configure-title-case
+titleCaseStyle = "none"
+
 # 是否复数化列表页面的标题
 pluralizeListTitles = false
 
@@ -36,14 +40,10 @@ enableGitInfo = true
 # 是否生成 robots.txt 文件
 enableRobotsTXT = false
 
-# 每一分页的文章数（仅对「文章摘要」首页布局有效）
-[pagination]
-    pagerSize = 5
-
 # URL 相关
 disablePathToLower = false
 relativeURLs = false
-uglyURLs = false
+#uglyURLs = false
 
 # URL 结构
 [permalinks]
@@ -58,6 +58,12 @@ uglyURLs = false
 # 修改时间
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
+[pagination]
+    disableAliases = false
+    # 每一分页的文章数（仅对「文章摘要」首页布局有效）
+    pagerSize = 5
+    path = 'page'
 
 # Markdown 渲染器
 [markup]
@@ -94,8 +100,24 @@ uglyURLs = false
 [minify.tdewolff.html]
     keepWhitespace = false
 
+# 相关文章
+[related]
+    threshold = 80
+    includeNewer = true
+    toLower = true
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+    [[related.indices]]
+        name = "tags"
+        weight = 95
+    [[related.indices]]
+        name = "date"
+        weight = 10
+        pattern = "2006"
+
 # 作者信息
-[author]
+[params.author]
     # 名字
     name = "kxx"
     # 邮箱
@@ -108,22 +130,6 @@ uglyURLs = false
     website = "https://kxx.me/"
     # 推特
     twitter = "kxx"
-
-# 相关文章
-[related]
-    threshold = 80
-    includeNewer = true
-    toLower = true
-    # [[related.indices]]
-    #     name = "categories"
-    #     weight = 100
-    [[related.indices]]
-        name = "tags"
-        weight = 95
-    [[related.indices]]
-        name = "date"
-        weight = 10
-        pattern = "2006"
 
 # Atom 文件格式的媒体类型
 [mediaTypes."application/atom+xml"]
@@ -162,7 +168,7 @@ uglyURLs = false
 
 # RSS & Atom 文章数限制
 [services.rss]
-    limit = 10
+    limit = -1
 
 
 
