@@ -14,4 +14,8 @@ isCJKLanguage: true
 
 ​![](https://raw.githubusercontent.com/kxx/k-pic/main/img/20250729205332.heic)​
 
+这是一张图片
+
+​![](https://raw.githubusercontent.com/kxx/k-pic/main/img/20250729210055.jpg "图片")​
+
 ‍
